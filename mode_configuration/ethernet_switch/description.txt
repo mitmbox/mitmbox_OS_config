@@ -1,0 +1,6 @@
+This mode enables a ethernet switch on port 2, 1, 0 and 4. Port 3 is used as an management interface to acces the switch.
+
+### interfaces ###
+
+# port ordering (view from front):
+#   [ 2 1 0 4 ] [ 3 ]
