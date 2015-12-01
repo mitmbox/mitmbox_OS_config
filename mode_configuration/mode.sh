@@ -2,7 +2,7 @@
 
 case "$1" in
         1)
-            source ethernet_bridge/ethernet_bridge.sh
+            ethernet_bridge/ethernet_bridge.sh
             ;;
          
         2)

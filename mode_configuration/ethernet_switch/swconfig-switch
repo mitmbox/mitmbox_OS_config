@@ -6,10 +6,7 @@ ifconfig eth0 up
 
 swconfig dev eth0 set reset 1
 swconfig dev eth0 set enable_vlan 1
-swconfig dev eth0 vlan 101 set ports '2'
-swconfig dev eth0 vlan 101 set ports '1'
-swconfig dev eth0 vlan 101 set ports '0'
-swconfig dev eth0 vlan 101 set ports '4'
+swconfig dev eth0 vlan 101 set ports '2 1 0 4'
 
 swconfig dev eth0 vlan 201 set ports '3 8t'
 swconfig dev eth0 set apply 1
