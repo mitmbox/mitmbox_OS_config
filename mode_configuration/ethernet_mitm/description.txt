@@ -1,0 +1,31 @@
+This mode bridges traffic between interface br0 and br1 and intercepts traffic as needed for man-in-the-middle attacks.
+
+### interfaces ###
+
+# port ordering (view from front):
+#   [ 2 1 0 4 ] [ 3 ]
+
+# first interface of ethernet bridge (port 0)
+br0       Link encap:Ethernet  HWaddr 02:59:05:c1:67:17  
+          inet6 addr: fe80::59:5ff:fec1:6717/64 Scope:Link
+
+# first interface of ethernet bridge (port 4)
+br1       Link encap:Ethernet  HWaddr 02:59:05:c1:67:18  
+          inet6 addr: fe80::59:5ff:fec1:6718/64 Scope:Link
+
+# configuration interface (port 3)
+conf0     Link encap:Ethernet  HWaddr 02:59:05:c1:67:19  
+          inet addr:10.0.0.1  Bcast:10.0.0.255  Mask:255.255.255.0
+
+# lan interface (port 1)
+eth0      Link encap:Ethernet  HWaddr 02:59:05:c1:67:15  
+          inet6 addr: fe80::59:5ff:fec1:6715/64 Scope:Link
+
+# monitor interface (port 2)
+mon0      Link encap:Ethernet  HWaddr 02:59:05:c1:67:15  
+          inet addr:10.1.1.1  Bcast:10.1.1.255  Mask:255.255.255.0
+
+# wifi interface (built-in)
+wlan0     Link encap:Ethernet  HWaddr ac:a2:13:c1:68:e4  
+          inet addr:10.9.9.1  Bcast:10.9.9.255  Mask:255.255.255.0
+
